@@ -16,19 +16,9 @@
 
         <ImageView
             android:id="@+id/logo"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            app:srcCompat="@drawable/logo" />
-
-        <TextView
-            android:id="@+id/teks"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/app"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:textColor="#fff"
-            android:layout_marginTop="5dp"/>
+            android:layout_width="154dp"
+            android:layout_height="155dp"
+            app:srcCompat="@drawable/meat5" />
 
     </LinearLayout>
 

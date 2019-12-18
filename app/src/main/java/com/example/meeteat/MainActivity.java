@@ -11,7 +11,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     DatabaseHelper db;
     Button logout;
-    private Button searchh;
+    private Button searchh,profil,booking,payment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
         db=new DatabaseHelper(this);
         logout=(Button)findViewById(R.id.btn_logout);
         searchh=(Button)findViewById(R.id.search);
+        profil=(Button)findViewById(R.id.profil);
+        booking=(Button)findViewById(R.id.booking);
+        payment=(Button)findViewById(R.id.payment);
         Boolean checkSession=db.checkSession("ada");
         if(checkSession==false){
             Intent loginIntent= new Intent(MainActivity.this,Login.class);
@@ -51,6 +54,29 @@ public class MainActivity extends AppCompatActivity {
 
                 }
         });
+        profil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent ProfileIntenttt=new Intent(MainActivity.this,ProfileActivity.class);
+                startActivity(ProfileIntenttt);
 
+            }
+        });
+        booking.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent ProfileIntenttt=new Intent(MainActivity.this,BookingActivity.class);
+                startActivity(ProfileIntenttt);
+
+            }
+        });
+        payment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent ProfileIntenttt=new Intent(MainActivity.this,PaymentActivity.class);
+                startActivity(ProfileIntenttt);
+
+            }
+        });
     }
 }
